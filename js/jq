@@ -1,0 +1,35 @@
+<script type="text/javascript">
+        $(document).ready(function () {
+          $(".humbger-menu").click(function () {
+            $('.mobile-menu').show('slide, right, 500');
+            $('.overlay').show('slide, right, 500');
+          });
+          $(".close, .overlay").click(function () {
+            $('.mobile-menu').hide('slide, right, 500');
+            $('.overlay').hide('slide, right, 500');
+          });
+        });
+          $(".btn-one").click(function(){
+            $(".box").hide();
+          });
+          $(".btn-one").click(function(){
+            $(".box").show();
+          });
+          $('.btn-one').click(function(){
+                $('.popup, .overlay-five').fadeIn(500)
+                $('body').addClass('hidden')
+            })
+            $('.popup .close-one, .overlay-five').click(function(){
+                $('.popup, .overlay-five').fadeOut(300)
+                $('body').removeClass('.hidden')
+            })
+            $('.menu li > .sub-menu').parent().click(function(){
+                var submenu = $(this).children('.sub-menu');
+                if ( $(submenu).is(':hidden') ) {
+                    $('.sub-menu').slideUp(200);
+                    $(submenu).slideDown(200);
+                } else {
+                    $(submenu).slideUp(200);
+                }
+            })
+      </script>
